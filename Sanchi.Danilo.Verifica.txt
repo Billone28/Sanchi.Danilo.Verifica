@@ -1,0 +1,69 @@
+CREATE TABLE Statistica
+(
+ codice int NOT NULL PRIMARY KEY,
+ cognome char(20) not null,
+ data_nascita int,
+ altezza int,
+ peso int
+)
+
+INSERT INTO Statistica
+(
+ codice, cognome, data_nascita, altezza, peso
+)
+VALUES
+(
+ '1', 'Barbieri', '1980', '178', '75'
+)
+VALUES
+(
+ '2', 'Bianchi', '1985', '180', '82'
+)
+VALUES
+(
+ '3', 'Conti', '1978', '165', '68'
+)
+VALUES
+(
+ '4', 'Fontana', '2000', '177', '74'
+)
+VALUES
+(
+ '5', 'Galli', '2005', '190', '89'
+)
+VALUES
+(
+ '6', 'Mancini', '1997', '185', '87'
+)
+VALUES
+(
+ '7', 'Rossi', '2001', '187', '90'
+)
+VALUES
+(
+ '8', 'Ciuffreda', '2003', '210', '200'
+)
+VALUES
+(
+ '9', 'Pire', '2004', '150', '900'
+)
+VALUES
+(
+ '10', 'Montalti', '2001', '199', '32'
+)
+
+ALTER TABLE Statistica
+ADD Nazionalità char(30)
+
+DELETE FROM Statistica WHERE CODICE = '5'
+
+UPDATE Statistica
+SET anno_nascita = '1981'
+WHERE codice = '3'
+
+UPDATE Statistica
+SET altezza = 'altezza+1'
+WHERE altezza
+
+ALTER TABLE statistica
+DROP peso
